@@ -22,6 +22,12 @@
       box-sizing: border-box
     }
 
+    :root {
+      /* CHỈNH VỊ TRÍ ẢNH MỞ ĐẦU TẠI ĐÂY */
+      /* 0% = Sát trái | 50% = Chính giữa | 100% = Sát phải */
+      --opening-bg-x: 100%;
+    }
+
     /* ===== CENTERED CONTAINER & VIGNETTE ===== */
     body {
       font-family: 'Poppins', sans-serif;
@@ -121,7 +127,7 @@
     #preloader {
       position: fixed;
       inset: 0;
-      background: url('Mở đầu.jpg') center 0%/cover no-repeat;
+      background: url('Mở đầu.jpg') left var(--opening-bg-x) top 0/cover no-repeat;
       z-index: 9999;
       display: flex;
       align-items: center;
@@ -194,7 +200,7 @@
     #env-overlay {
       position: fixed;
       inset: 0;
-      background: url('Mở đầu.jpg') center 0%/cover no-repeat;
+      background: url('Mở đầu.jpg') left var(--opening-bg-x) top 0/cover no-repeat;
       z-index: 999;
       display: flex;
       align-items: center;
@@ -612,9 +618,12 @@
         </div>
       </div>
       <button id="open-btn" class="btn-gold"
-        style="margin-top:26px;animation:pulse 2s infinite;font-family:'Great Vibes',cursive;font-size:1.9rem;padding:9px 38px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap">💌
-        Mở Thiệp Mời</button>
-      <p style="color:rgba(255,255,255,.4);font-size:.72rem;margin-top:10px;white-space:nowrap">Chúng tôi có một tin vui
+        style="margin-top:26px;animation:pulse 2s infinite;font-family:'Alex Brush',cursive;font-size:2.0rem;padding:6px 42px;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;line-height:1">
+        <span style="font-size:1.8rem">💌</span> Mở Thiệp Mời
+      </button>
+      <p
+        style="color:rgba(255,255,255,.6);font-size:.8rem;margin-top:12px;white-space:nowrap;letter-spacing:1px;font-family:'Poppins',sans-serif">
+        Chúng tôi có một tin vui
         muốn gửi đến bạn</p>
     </div>
   </div>
@@ -670,7 +679,7 @@
                 style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;max-width:none;height:auto;z-index:1;animation:hBlink 1s infinite alternate;pointer-events:none"
                 alt="">
               <div
-                style="position:absolute;top:48px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'Alex Brush',cursive;color:#fdf6ee;font-size:2rem;animation:tBlink 1s infinite alternate">
+                style="position:absolute;top:48px;left:180%;transform:translateX(-50%);white-space:nowrap;font-family:'Alex Brush',cursive;color:#fdf6ee;font-size:2rem;animation:tBlink 1s infinite alternate">
                 Our wedding day</div>
             </div>
             <div style="opacity:.6">26</div>
